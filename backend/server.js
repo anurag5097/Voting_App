@@ -1,17 +1,15 @@
 import express from "express";
+import chalk from "chalk";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js"
-import chalk from "chalk";
-
 
 dotenv.config();
 connectDB();
 
-
-const app = express()
+const app = express();
 
 app.get("/", (req, res) => {
-    res.send("Backend API is running")
+    res.send("API is running")
 })
 
 const PORT = process.env.PORT || 5000;
